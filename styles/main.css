@@ -53,12 +53,8 @@ hr.solid {
     background-color: #202020;
 }
 
-/* .menu li:nth-child(3n+1) > a {
-    background-color: #F02020;
-} */
-
 .subscribe {
-    margin-top: 7rem;
+    margin-top: 3rem;
 }
 
 .view {
@@ -76,8 +72,11 @@ hr.solid {
     text-decoration: none;
     padding: 1rem;
     border-radius: 0.5rem;
-    background-color: black;
+    background-color: #202020;
    
+}
+.view-button > a:hover{
+    background-color: black;
 }
 
 .button {
@@ -88,11 +87,10 @@ hr.solid {
 }
 
 .button > a {
-    font-size: 180%;
+    font-size: 150%;
     color: #808080;
     text-decoration: none;
     padding: 1rem;
-    border: 1px solid #808080;
     border-radius: 0.5rem;
     background-color: black;
 }
@@ -101,12 +99,9 @@ hr.solid {
     background-color: #202020;
 }
 
-.view-button > a:hover{
-    background-color: #202020;
-}
+
 
 /* content section */
-
 .article {
     width: 40%;
     font-family: monospace;
@@ -115,9 +110,72 @@ hr.solid {
     color:#808080;
 }
 
+.form-article{
+    width: 60%;
+    font-family: monospace;
+    padding-top: 5rem;
+    margin: auto;
+    color:#808080;
+}
+
+.inp{
+    background-color: black;
+    border: 1px solid;
+    border-radius: 6px;
+    color: #808080;
+    font-weight: bold;
+    font-size: 15px;
+    width: 300px;
+    height: 35px;
+    padding:0.5rem;
+}
+.split-card{
+    width: 80%;
+    height: 200px
+}
+.card{
+    width: 80%;
+}
+.card-content{
+    padding: 30px;
+    background-color: #202020;
+    border-radius: 6px;
+}
+.split-left{
+    padding: 30px;
+    background-color: #202020;
+    border-radius: 6px 0px 0px 6px;
+    width: 50%;
+}
+.split-right{
+    padding: 0px;
+    width: 50%;
+}
+.card-img{
+    display:block; 
+    width:100%; 
+    height:35%;
+    border-radius: 0px 6px 6px 0px;
+}
+
+.inp2{
+    background-color: black;
+    border: 1px solid;
+    border-radius: 6px;
+    color: #808080;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0.5rem;
+}
+
+td  {
+    padding: 10px;
+}
+
 #timeline{
     width: 80%;
 }
+
 #timeline-title{
     margin:auto;
     padding-bottom: 5rem;
@@ -175,11 +233,11 @@ hr.solid {
   .timeline::after {
     content: '';
     position: absolute;
-    width: 3px;
+    width: 0.5px;
     background-color: #808080;
     top: 0;
     bottom: 0;
-    left: 20%;
+    left: 20.25%;
     margin-left: -3px;
   }
   
@@ -199,16 +257,12 @@ hr.solid {
     width: 30px;
     height: 30px;
     right: -30px;
-    background-color: black;
-    border: 2px solid #808080;
+    background-color: #202020;
+    border: 3px solid black;
     top: 15px;
     border-radius: 50%;
     z-index: 1;
     margin-bottom:10px;
-  }
-
-  .left{
-      left: 10%
   }
   /* Place the container to the right */
   .right {
@@ -218,29 +272,6 @@ hr.solid {
   /* Fix the circle for containers on the right side */
   .right::after {
     left: -18px;
-  }
-  .row {
-    display: flex;
-    width:80%;
-    border: 2px solid;
-    border-radius: 6px;
-  }
-  
-  .column {
-    flex: 50%;
-  }
-  /* The actual content */
-  #content {
-    padding: 20px 20px;
-    background-color: black;
-    position: relative;
-    border-right: 2px solid;
-  }
-
-  #link {
-    padding: 20px 30px;
-    background-color: black;
-    position: relative;
   }
   
   /* Media queries - Responsive timeline on screens less than 600px wide */
@@ -252,7 +283,7 @@ hr.solid {
   
   /* Full-width containers */
     .container {
-      width: 100%;
+      width: 50%;
       padding-left: 70px;
       padding-right: 25px;
     }
