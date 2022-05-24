@@ -29,8 +29,7 @@ textarea{
   color:#21f838;
 }
 .display-area-text{
-  /* margin-left: 40px; */
-  padding: 40px 100px 40px 40px;
+  margin-left: 40px;
 }
 .display-area-err{
   color:#861ca0
@@ -42,7 +41,7 @@ textarea{
 
 #cmd {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 18px;
+  font-size: 20.5px;
   background: black;
   color: #21f838;
   padding: 5px;
@@ -60,7 +59,7 @@ textarea{
 #cursor {
   float: left;
   width: 8px;
-  height: 20px;
+  height: 22px;
   background: #21f838;
 }
   
@@ -71,24 +70,29 @@ input {
 }
 
 .link{
-  color:#2686f5;
+  color:#579ef0;
+  font-size:20px;
 }
+
+
 
 
 p{
   font-family: 'Courier New', Courier, monospace;
-  font-size: 19px;
-  color: #c07042;
+  font-size: 20px;
+  color: #fff;
 }
 
 a{
   font-family: 'Courier New', Courier, monospace;
-  font-size: 18px;
-  color: #c07042;
+  font-size: 20px;
+  color: #fff;
+  
 }
+
 a:hover {
   color: #5e5b5b;
-  background-color: #73a8e6;
+  background-color: #80abdd;
 }
 
 ul.main-ul {
@@ -106,14 +110,17 @@ ul.sub{
 }
 .o2{
   padding-left:20px;
+  font-size:20px;
 }
 .o1{
   padding-left: 100px;
   align-items:center;
-  color: #c07042;
+  color: #fff;
+  font-size:20px;
 }
 .o0{
-  color: #2686f5;
+  color:#579ef0;
+  font-size:20px;
 }
 
 

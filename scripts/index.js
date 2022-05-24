@@ -4,7 +4,7 @@ var facebook = "facebook.com/andrew.adamah.1612/";
 var linkedin = "linkedin.com/in/andrew-adamah/";
 
 var commands = [
-  "whois",
+  "bio",
   "projects",
   "socials",
   "email",
@@ -25,7 +25,7 @@ $(document).ready(function () {
     } else {
       $("#cursor").css({ visibility: "visible" });
     }
-  }, 500);
+  }, 700);
 
   $("input").keyup(function () {
     $("#cmd span").text("guest@andrewadamah.com:~$ " + $(this).val());
@@ -58,8 +58,8 @@ $(document).ready(function () {
         );
 
         switch (command) {
-          case "whois":
-            cmd = "whois";
+          case "bio":
+            cmd = "bio";
             $(".display-area").append(
               `<p class="display-area-text">  I am a fourth year student at Ontario Tech University. My programming language experience includes Python, Java, JavaScript, SQL, Dart, C++ however I am always open to learning new languages and frameworks. 
                 My interests are mainly in Data Science, Machine Learning, Artificial Intelligence and Blockhain.  My main motivation as a Computer Science major is how technology, specifically software and data, can be beneficial to my everyday 
@@ -69,6 +69,46 @@ $(document).ready(function () {
             break;
           case "projects":
             cmd = "projects";
+            $(".display-area").append(
+              `<ul class="main-ul">
+              <li class="main-li"><table>
+                <tr><td class="o0">big data analytics</td><td class="o1"><a href="https://www.` +
+                github +
+                `/BigDataAnalytics">` +
+                github +
+                `BigDataAnalytics</a></td>
+                  </tr>
+                </table>
+              </li>
+              <li class="main-li"><table>
+                <tr><td class="o0">data mining</td><td class="o1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.` +
+                github +
+                `/DataMining">` +
+                github +
+                `DataMining</a></td>
+                  </tr>
+                </table>
+              </li>
+              <li class="main-li"><table>
+                <tr><td class="o0">web3</td><td class="o1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.` +
+                github +
+                `/Web3">` +
+                github +
+                `Web3</a></td>
+                  </tr>
+                </table>
+              </li>
+              <li class="main-li"><table>
+                <tr><td class="o0">spotifire</td><td class="o1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.` +
+                github +
+                `/Spotifire">` +
+                github +
+                `Spotifire</a></td>
+                  </tr>
+                </table>
+              </li>
+            </ul>`
+            );
             break;
           case "socials":
             cmd = "socials";
@@ -118,7 +158,7 @@ $(document).ready(function () {
           case "help":
             $(".display-area").append(`<ul class="main-ul">
             <li class="main-li"><table>
-              <tr><td class="o0">whois</td><td class="o1">&nbsp;&nbsp;&nbsp;who is Andrew Adamah?</td>
+              <tr><td class="o0">bio</td><td class="o1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;who is Andrew Adamah?</td>
                 </tr>
               </table>
             </li>
