@@ -16,6 +16,7 @@ var commands = [
 
 var cmd;
 
+var counter = 0;
 var command;
 var commandHistory = [];
 $(document).ready(function () {
@@ -206,20 +207,21 @@ $(document).ready(function () {
           case "history":
             cmd = "history";
             commandHistory.push(cmd);
-            var historyLength = commandHistory.length - 1;
+            // $(".history-ul").html(``);
             $(".display-area").append(
               `
-              <ul class="history-ul" id="ch-` +
-                historyLength +
+              <ul class="history-ul" id="h` +
+                counter +
                 `">
               </ul>`
             );
+
             for (let i = 0; i < commandHistory.length; i++) {
-              $(`#id="ch-` + historyLength + `"`).html(
+              $(`#h` + counter).append(
                 `<li class="history-li"></li> ` + commandHistory[i] + ``
               );
             }
-
+            counter += 1;
             break;
           case "clear":
             cmd = "clear";
@@ -227,6 +229,7 @@ $(document).ready(function () {
             $(".display-area").html(``);
             break;
           default:
+            cmd = command;
             commandHistory.push(cmd);
             "Command not found. Type 'help' for a list of available commands.";
             $(".display-area").append(
@@ -235,7 +238,7 @@ $(document).ready(function () {
             );
         }
 
-        console.log(commandHistory.length - 1);
+        console.log(commandHistory);
         window.scrollTo(0, document.body.scrollHeight);
       }
     },
