@@ -32,7 +32,7 @@ textarea{
   margin-left: 40px;
 }
 .display-area-err{
-  color:#861ca0
+  color:#cc131d
 }
 .parent {
   position: relative;
@@ -70,7 +70,7 @@ input {
 }
 
 .link{
-  color:#579ef0;
+  color:#861ca0;
   font-size:20px;
 }
 
@@ -80,7 +80,7 @@ input {
 p{
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
-  color: #fff;
+  color: #579ef0;
 }
 
 a{
@@ -97,6 +97,11 @@ a:hover {
 
 ul.main-ul {
   list-style-type: none;
+}
+ul.history-ul {
+  list-style-type: none;
+  color:#579ef0;
+  font-size:20px;
 }
 ul.main-li {
   margin-top:40px;
@@ -115,11 +120,11 @@ ul.sub{
 .o1{
   padding-left: 100px;
   align-items:center;
-  color: #fff;
+  color: #579ef0;
   font-size:20px;
 }
 .o0{
-  color:#579ef0;
+  color:#861ca0;
   font-size:20px;
 }
 

@@ -2,6 +2,7 @@ var github = "github.com/slyce233/";
 var twitter = "twitter.com/adamah1_/";
 var facebook = "facebook.com/andrew.adamah.1612/";
 var linkedin = "linkedin.com/in/andrew-adamah/";
+var emailTo = "adamah.andrew45@gmail.com";
 
 var commands = [
   "bio",
@@ -16,7 +17,7 @@ var commands = [
 var cmd;
 
 var command;
-
+var commandHistory = [];
 $(document).ready(function () {
   $("input").focus();
   window.setInterval(function () {
@@ -60,6 +61,7 @@ $(document).ready(function () {
         switch (command) {
           case "bio":
             cmd = "bio";
+            commandHistory.push(cmd);
             $(".display-area").append(
               `<p class="display-area-text">  I am a fourth year student at Ontario Tech University. My programming language experience includes Python, Java, JavaScript, SQL, Dart, C++ however I am always open to learning new languages and frameworks. 
                 My interests are mainly in Data Science, Machine Learning, Artificial Intelligence and Blockhain.  My main motivation as a Computer Science major is how technology, specifically software and data, can be beneficial to my everyday 
@@ -69,6 +71,7 @@ $(document).ready(function () {
             break;
           case "projects":
             cmd = "projects";
+            commandHistory.push(cmd);
             $(".display-area").append(
               `<ul class="main-ul">
               <li class="main-li"><table>
@@ -112,6 +115,7 @@ $(document).ready(function () {
             break;
           case "socials":
             cmd = "socials";
+            commandHistory.push(cmd);
             $(".display-area").append(
               `<ul class="main-ul">
             <li class="main-li"><table>
@@ -154,8 +158,16 @@ $(document).ready(function () {
             break;
           case "email":
             cmd = "email";
+            commandHistory.push(cmd);
+            $(".display-area").append(
+              `<p class="display-area-text">  Opening email ...
+                  </p>`
+            );
+            window.open("mailto:" + emailTo);
             break;
           case "help":
+            cmd = "help";
+            commandHistory.push(cmd);
             $(".display-area").append(`<ul class="main-ul">
             <li class="main-li"><table>
               <tr><td class="o0">bio</td><td class="o1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;who is Andrew Adamah?</td>
@@ -168,7 +180,7 @@ $(document).ready(function () {
               </table>
             </li>
             <li class="main-li"><table>
-              <tr><td class="o0">socials</td><td class="o1">&nbsp;links to my socials</td>
+              <tr><td class="o0">socials</td><td class="o1">&nbsp;links to my social media</td>
                 </tr>
               </table>
             </li>
@@ -193,21 +205,37 @@ $(document).ready(function () {
             break;
           case "history":
             cmd = "history";
+            commandHistory.push(cmd);
+            var historyLength = commandHistory.length - 1;
+            $(".display-area").append(
+              `
+              <ul class="history-ul" id="ch-` +
+                historyLength +
+                `">
+              </ul>`
+            );
+            for (let i = 0; i < commandHistory.length; i++) {
+              $(`#id="ch-` + historyLength + `"`).html(
+                `<li class="history-li"></li> ` + commandHistory[i] + ``
+              );
+            }
+
             break;
           case "clear":
             cmd = "clear";
+            commandHistory.push(cmd);
             $(".display-area").html(``);
             break;
           default:
-            cmd =
-              "Command not found. Type 'help' for a list of available commands.";
+            commandHistory.push(cmd);
+            "Command not found. Type 'help' for a list of available commands.";
             $(".display-area").append(
               `<p class="display-area-err"> Command not found. Type <span class="link">'help'</span> for a list of available commands.
                     </p>`
             );
         }
 
-        console.log(cmd);
+        console.log(commandHistory.length - 1);
         window.scrollTo(0, document.body.scrollHeight);
       }
     },
