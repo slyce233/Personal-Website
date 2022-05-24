@@ -29,7 +29,11 @@ textarea{
   color:#21f838;
 }
 .display-area-text{
-  margin-left: 40px;
+  /* margin-left: 40px; */
+  padding: 40px 100px 40px 40px;
+}
+.display-area-err{
+  color:#861ca0
 }
 .parent {
   position: relative;
@@ -66,16 +70,51 @@ input {
   opacity: 0; 
 }
 
-
+.link{
+  color:#2686f5;
+}
 
 
 p{
   font-family: 'Courier New', Courier, monospace;
-  font-size: 18px;
+  font-size: 19px;
+  color: #c07042;
 }
 
+a{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  color: #c07042;
+}
+a:hover {
+  color: #5e5b5b;
+  background-color: #73a8e6;
+}
 
-
+ul.main-ul {
+  list-style-type: none;
+}
+ul.main-li {
+  margin-top:40px;
+}
+ul.main > li{
+  margin-bottom:5px;
+}
+ul.sub{
+  list-style-type: none;
+  margin-left: 100px;
+}
+.o2{
+  padding-left:20px;
+}
+.o1{
+  padding-left: 100px;
+  align-items:center;
+  color: #c07042;
+}
+.o0{
+  color: #2686f5;
+}
 
 
 /* content section */
