@@ -120,11 +120,9 @@ $(document).ready(function () {
             $(".display-area").append(
               `<ul class="main-ul">
             <li class="main-li"><table>
-              <tr><td class="o0">linkedin</td><td class="o1"><a href="https://www.` +
+              <tr><td class="o0">linkedin</td><td class="o1">` +
                 linkedin +
-                `">` +
-                linkedin +
-                `</a></td>
+                `</td>
                 </tr>
               </table>
             </li>
@@ -216,7 +214,7 @@ $(document).ready(function () {
               </ul>`
             );
 
-            for (let i = 0; i < commandHistory.length; i++) {
+            for (let i = 0; i < commandHistory.length - 1; i++) {
               $(`#h` + counter).append(
                 `<li class="history-li"></li> ` + commandHistory[i] + ``
               );
@@ -250,3 +248,7 @@ $(document).ready(function () {
     $("#cmd span").text("guest@andrewadamah.com:~$ ");
   });
 });
+
+function openUrl(url) {
+  window.open(url, "_blank");
+}
