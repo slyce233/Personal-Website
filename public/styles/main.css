@@ -41,7 +41,7 @@ textarea{
 
 #cmd {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 20.5px;
+  font-size: 18.5px;
   background: black;
   color: #21f838;
   padding: 5px;
@@ -59,7 +59,7 @@ textarea{
 #cursor {
   float: left;
   width: 8px;
-  height: 22px;
+  height: 20px;
   background: #21f838;
 }
   
@@ -71,7 +71,7 @@ input {
 
 .link{
   color:#579ef0;
-  font-size:20px;
+  font-size:18px;
 }
 
 
@@ -79,13 +79,13 @@ input {
 
 p{
   font-family: 'Courier New', Courier, monospace;
-  font-size: 20px;
+  font-size: 18px;
   color: #fff;
 }
 
 a{
   font-family: 'Courier New', Courier, monospace;
-  font-size: 20px;
+  font-size: 18px;
   color: #fff;
   
 }
@@ -121,11 +121,11 @@ ul.sub{
   padding-left: 100px;
   align-items:center;
   color: #fff;
-  font-size:20px;
+  font-size:18px;
 }
 .o0{
   color:#579ef0;
-  font-size:20px;
+  font-size:18px;
 }
 
 
@@ -136,4 +136,3 @@ ul.sub{
     color:#808080;
     position:relative;
 }
-
