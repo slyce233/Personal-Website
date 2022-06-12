@@ -268,7 +268,13 @@ $(document).ready(function () {
         }
 
         console.log(commandHistory);
-        window.scrollTo(0, document.body.scrollHeight);
+        console.log(screen.width);
+        // var cm = document.getElementById("cmd");
+        // cm.scrollIntoView({block: "center"});
+        $('html,body').animate({
+          scrollTop: $(this).offset().top - ( $(window).height() - $(this).outerHeight(true) ) / 2
+      }, 200);
+        // window.scrollTo(0, document.body.scrollHeight);
       }
     },
     false
